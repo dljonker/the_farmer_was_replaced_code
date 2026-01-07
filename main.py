@@ -1,10 +1,9 @@
 import functions
 
 change_hat(Hats.Brown_Hat)
-r = get_world_size()
-#functions.clean()
+
 functions.origin()
-for i in range(r):
+for i in range(functions.r):
 	functions.new_harvest()
 	move(East)
 	
@@ -20,7 +19,7 @@ def main():
 		functions.planting(crops[count])
 		count += 1
 	functions.origin()
-	for i in range(r):
+	for i in range(functions.r):
 		functions.new_harvest()
 		move(East)
 	

@@ -1,7 +1,8 @@
+r = get_world_size()
+
 def clean():
 	x = get_pos_x()
 	y = get_pos_y()
-	r = get_world_size()
 
 	if x != 0:
 		move_x = r - x
@@ -22,7 +23,6 @@ def clean():
 def origin():
 	x = get_pos_x()
 	y = get_pos_y()
-	r = get_world_size()
 
 	if x != 0:
 		move_x = r - x
@@ -34,7 +34,6 @@ def origin():
 			move(North)
 
 def new_harvest():
-	r = get_world_size()
 	for i in range(r):
 		if get_entity_type() == Entities.Dead_Pumpkin:
 			harvest()
@@ -44,7 +43,6 @@ def new_harvest():
 		move(North)
 			
 def planting(plants):
-	r = get_world_size()
 	half = r/2
 	if plants == "wood":
 		for i in range(half): 
@@ -97,7 +95,6 @@ def planting(plants):
 		move(East)
 
 def check():
-	r = get_world_size()
 	for i in range(4):
 		check = False
 		while check == False:
@@ -117,7 +114,6 @@ def check():
 				move(North)
 				
 def waterrrr():
-	r = get_world_size()
 	for i in range(r):
 		for i in range(r):
 			use_item(Items.Water)
